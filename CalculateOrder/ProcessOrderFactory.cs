@@ -1,8 +1,6 @@
 ﻿using CalculateOrder.Checkout;
 using CalculateOrder.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CalculateOrder
 {
