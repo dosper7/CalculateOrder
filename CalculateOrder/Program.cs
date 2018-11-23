@@ -1,4 +1,5 @@
 ﻿using CalculateOrder.Checkout;
+using CalculateOrder.Interfaces;
 using System;
 using System.Linq;
 
@@ -13,8 +14,8 @@ namespace CalculateOrder
 
             var stockInfo = new CSVStockInfo(args[0]);
             var orderInfo = new ConsoleOrderInfo(args.Skip(1));
-            var processOrder = new ConsoleProcessOrder(orderInfo, stockInfo);
-            var total = processOrder.GetTotal(23);
+            IProcessOrder po = ProcessOrderFactory.Get("console", orderInfo, stockInfo);
+            var total = po.GetTotal(23);
 
             Console.WriteLine($"total order price: {total}");
             Console.ReadKey();
