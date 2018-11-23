@@ -1,4 +1,4 @@
-﻿namespace CalculateOrder.Order
+﻿namespace CalculateOrder.Elements
 {
     public class ProductStock
     {
