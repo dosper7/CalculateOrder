@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CalculateOrder": {
+      "commandName": "Project",
+      "commandLineArgs": "Assets/sample.catalog.csv P1 6 P2 5 P4 1"
+    }
+  }
+}
