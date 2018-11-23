@@ -2,6 +2,7 @@
 using CalculateOrder.Elements;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace CalculateOrder.Checkout
 {
@@ -19,8 +20,10 @@ namespace CalculateOrder.Checkout
         private void ParseProducts()
         {
             this.Items = new List<OrderItem>();
-           
 
+            if (this.ConsoleProductData.Count % 2 != 0)
+                throw new Exception("Products with incorrect format");
+           
             while (this.ConsoleProductData.Count != 0)
             {
                 Items.Add(new OrderItem()
