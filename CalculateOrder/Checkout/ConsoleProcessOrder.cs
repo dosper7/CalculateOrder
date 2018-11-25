@@ -24,7 +24,8 @@ namespace CalculateOrder.Checkout
                 var prodInStock = stock.FirstOrDefault(p => p.ProductCode == prodOrder.ProductCode);
                 if (prodInStock != null)
                 {
-                    total += prodOrder.Quantity * prodInStock.Price;
+                    var numItems = Math.Max(prodOrder.Quantity, prodInStock.Quantity);
+                    total += numItems * prodInStock.Price;
                 }
             }
 
